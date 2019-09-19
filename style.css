@@ -169,7 +169,8 @@ _:-ms-lang(x), _:-webkit-full-screen, .header_search_label {
       transform: translateX(-50%) rotateZ(90deg); }
     .wheather_today {
       max-width: 60%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 0; }
       .wheather_today_header {
         letter-spacing: 1px;
         font-size: 6rem; }
