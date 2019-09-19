@@ -7,7 +7,7 @@ html {
   font-size: 10px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1110px) {
   html {
     font-size: 5px; } }
 
@@ -27,7 +27,7 @@ html {
     transform: rotateZ(0deg) scale(3) translate(-18rem, 0);
     z-index: -1; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1110px) {
   .forecast {
     overflow-y: auto;
     background-image: linear-gradient(to right, #185BBD, #101F7E); }
@@ -84,7 +84,7 @@ html {
       opacity: 0;
       top: 30%; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1110px) {
   .header {
     justify-content: center; }
     .header_search {
@@ -150,7 +150,13 @@ _:-ms-lang(x), _:-webkit-full-screen, .header_search_label {
     .wheather_day_temp {
       font-size: 5rem; }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-height: 700px) {
+  .wheather {
+    padding-top: 8rem; }
+    .wheather_next {
+      top: 3rem; } }
+
+@media only screen and (max-width: 1110px) {
   .wheather {
     padding-top: 0;
     grid-template-columns: none;

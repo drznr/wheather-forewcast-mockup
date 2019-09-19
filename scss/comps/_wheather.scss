@@ -62,7 +62,17 @@
     }
 }
 
-@media only screen and (max-width: 960px) {  
+@media only screen and (max-height: 700px) {  
+    .wheather {
+        padding-top: 8rem;
+
+        &_next {
+            top: 3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1110px) {  
     .wheather {
         padding-top: 0;
         grid-template-columns: none;
@@ -109,3 +119,4 @@
         }
     }
 }
+
