@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass scss/main.scss style.css -w",
-    "start": "index.html",
-    "build": "npm run-script build"
+    "compile:sass": "node-sass scss/main.scss style.css -w"
   },
   "author": "",
   "license": "ISC",
