@@ -1,0 +1,41 @@
+.forecast {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 4rem 6rem;
+
+    &_bg {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, $color-bg-light, $color-bg-dark);
+        transform: rotateZ(0deg) scale(3) translate(-18rem, 0);
+        z-index: -1;
+    }
+}
+
+@media only screen and (max-width: 960px) {  
+    .forecast {
+        overflow-y: auto;
+        background-image: linear-gradient(to right, $color-bg-light, $color-bg-dark);
+        
+        &_bg {
+            transform: rotateZ(-90deg) scale(2.75) translate(-17rem, 7rem);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .forecast_bg {
+        transform: rotateZ(-90deg) scale(4) translate(-6rem, 17rem);
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .forecast_bg {
+        transform: rotateZ(-90deg) scale(5) translate(-6rem, 17rem);
+    }
+}

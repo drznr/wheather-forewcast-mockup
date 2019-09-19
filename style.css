@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 5px; } }
+
+.forecast {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 4rem 6rem; }
+  .forecast_bg {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #185BBD, #101F7E);
+    transform: rotateZ(0deg) scale(3) translate(-18rem, 0);
+    z-index: -1; }
+
+@media only screen and (max-width: 960px) {
+  .forecast {
+    overflow-y: auto;
+    background-image: linear-gradient(to right, #185BBD, #101F7E); }
+    .forecast_bg {
+      transform: rotateZ(-90deg) scale(2.75) translate(-17rem, 7rem); } }
+
+@media only screen and (max-width: 600px) {
+  .forecast_bg {
+    transform: rotateZ(-90deg) scale(4) translate(-6rem, 17rem); } }
+
+@media only screen and (max-width: 350px) {
+  .forecast_bg {
+    transform: rotateZ(-90deg) scale(5) translate(-6rem, 17rem); } }
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8rem; }
+  .header_search {
+    min-width: 30%;
+    padding: 1rem 0;
+    background-color: #97C0E2;
+    position: relative;
+    border: 1px solid #7CB1DD;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: #101F7E;
+    font-weight: 700;
+    font-size: 1.5rem; }
+    .header_search_input {
+      background-color: transparent;
+      border-color: transparent;
+      color: inherit;
+      font-weight: inherit; }
+      .header_search_input:focus {
+        outline: none; }
+      .header_search_input::-webkit-input-placeholder {
+        color: inherit;
+        font-weight: inherit; }
+    .header_search_icon {
+      width: 2rem; }
+    .header_search_label {
+      position: absolute;
+      top: 55%;
+      right: 27%;
+      color: inherit;
+      font-size: inherit;
+      opacity: 1;
+      transition: all .2s; }
+    .header_search_input:placeholder-shown + .header_search_label {
+      opacity: 0;
+      top: 30%; }
+
+@media only screen and (max-width: 960px) {
+  .header {
+    justify-content: center; }
+    .header_search {
+      min-width: 60%; }
+      .header_search_label {
+        font-size: 3rem;
+        right: 26%; } }
+
+@media only screen and (max-width: 600px) {
+  .header_search {
+    min-width: 80%; } }
+
+_:-ms-lang(x), _:-webkit-full-screen, .header_search_label {
+  display: none; }
+
+.wheather {
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  padding-top: 18rem;
+  position: relative;
+  color: #FFFFFF; }
+  .wheather_next {
+    position: absolute;
+    width: 4rem;
+    top: 12rem;
+    right: 0;
+    cursor: pointer; }
+  .wheather_today {
+    padding-top: 10%;
+    padding-left: 10%;
+    white-space: nowrap; }
+    .wheather_today_header {
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: 300;
+      font-family: Arial, Helvetica, sans-serif; }
+    .wheather_today_sub {
+      font-size: 1.6rem;
+      color: #EFF1FA; }
+    .wheather_today_temp {
+      font-size: 12rem;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: inline-block;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      font-weight: 300; }
+    .wheather_today_desc {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px; }
+  .wheather_day {
+    background-color: rgba(136, 166, 250, 0.2);
+    padding: 3rem 2rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column; }
+    .wheather_day_symbol {
+      width: 50%;
+      align-self: center;
+      margin: 2rem 0; }
+    .wheather_day_temp {
+      font-size: 5rem; }
+
+@media only screen and (max-width: 960px) {
+  .wheather {
+    padding-top: 0;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 8rem; }
+    .wheather_next {
+      top: initial;
+      bottom: -14rem;
+      left: 50%;
+      transform: translateX(-50%) rotateZ(90deg); }
+    .wheather_today {
+      max-width: 60%;
+      margin: 0 auto; }
+      .wheather_today_header {
+        letter-spacing: 1px;
+        font-size: 6rem; }
+      .wheather_today_temp {
+        font-size: 16rem;
+        padding-left: 50%;
+        transform: translateX(-25%); }
+      .wheather_today_sub {
+        font-size: 2rem; }
+      .wheather_today_desc {
+        font-size: 2.5rem;
+        padding-left: 50%;
+        transform: translateX(-25%); }
+    .wheather_day {
+      max-width: 60%;
+      align-self: center;
+      margin: 0 auto;
+      transform: translateY(-10%); }
+      .wheather_day_symbol {
+        margin: 4rem 0; } }

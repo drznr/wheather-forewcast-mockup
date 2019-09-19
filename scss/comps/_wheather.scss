@@ -1,0 +1,111 @@
+.wheather {
+    width: 100%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    padding-top: 18rem;
+    position: relative;
+    color: $color-white;
+
+    &_next {
+        position: absolute;
+        width: 4rem;
+        top: 12rem;
+        right: 0;
+        cursor: pointer;
+    }
+
+    &_today {
+        padding-top: 10%;
+        padding-left: 10%;
+        white-space: nowrap;
+
+        &_header{
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 300;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &_sub {
+            font-size: 1.6rem;
+            color: #EFF1FA;
+        }
+        &_temp {
+            font-size: 12rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: inline-block;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        &_desc {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+    }
+    &_day {
+        background-color: rgba(136, 166, 250, .2);
+        padding: 3rem 2rem;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        &_symbol {
+            width: 50%;
+            align-self: center;
+            margin: 2rem 0;
+        }
+        &_temp {
+            font-size: 5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {  
+    .wheather {
+        padding-top: 0;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 8rem;
+
+        &_next {
+            top: initial;
+            bottom: -14rem;
+            left: 50%;
+            transform: translateX(-50%) rotateZ(90deg);
+        }
+        &_today {
+            max-width: 60%;
+            margin: 0 auto;
+
+            &_header {
+                letter-spacing: 1px;
+                font-size: 6rem;
+            }
+            &_temp {
+                font-size: 16rem;
+                padding-left: 50%;
+                transform: translateX(-25%);
+            }
+            &_sub {
+                font-size: 2rem;
+            }   
+            &_desc {
+                font-size: 2.5rem;
+                padding-left: 50%;
+                transform: translateX(-25%);
+            }
+        }
+        &_day {
+            max-width: 60%;
+            align-self: center;
+            margin: 0 auto;
+            transform: translateY(-10%);
+
+            &_symbol {
+                margin: 4rem 0;
+            }
+        }
+    }
+}
